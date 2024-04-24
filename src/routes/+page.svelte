@@ -33,14 +33,14 @@
 </script>
 
 <main class="flex h-screen w-screen flex-col items-center justify-center gap-8 bg-blue-100">
-	<div class="container grid grid-cols-2 gap-8 bg-orange-200">
-		<p>{value}</p>
+	<div class="container grid grid-cols-2 gap-8">
+		<textarea bind:value class="resize-none rounded" />
 		<div class="ck-content bg-white" style="--ck-todo-list-checkmark-size: 12px;">
 			<CKEditor id="_editor" bind:value config={editorConfig} />
 		</div>
 	</div>
-	<div class="container grid grid-cols-2 gap-8 bg-orange-200">
-		<p>{value2}</p>
+	<div class="container grid grid-cols-2 gap-8">
+		<textarea bind:value={value2} class="resize-none rounded" />
 		<div class="ck-content bg-white" style="--ck-todo-list-checkmark-size: 12px;">
 			<CKEditor id="_editor2" bind:value={value2} config={editorConfig} />
 		</div>
